@@ -44,7 +44,6 @@ namespace xadrez_console.tabuleiro
             p.Posicao = pos;
         }
 
-
         // verifica se uma posição é válida ou não
         public bool posicaoValida(Posicao pos)
         {
