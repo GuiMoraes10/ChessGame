@@ -17,5 +17,11 @@ namespace xadrez_console.tabuleiro
             QteMovimentos = 0;
         }
 
+        // aumenta a quantidade de movimentos em 1 quando a peca se movimentar no tabuleiro
+        public void incrementarQteMovimentos()
+        {
+            QteMovimentos++;
+        }
+
     }
 }
