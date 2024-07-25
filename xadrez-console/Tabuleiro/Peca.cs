@@ -2,7 +2,7 @@
 
 namespace xadrez_console.tabuleiro
 {
-    internal class Peca
+    internal abstract class Peca
     {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }
@@ -16,6 +16,9 @@ namespace xadrez_console.tabuleiro
             Tab = tab;
             QteMovimentos = 0;
         }
+
+        // método abstrato para os movimentos possíveis para cada peca
+        public abstract bool[,] movimentosPossiveis();
 
         // aumenta a quantidade de movimentos em 1 quando a peca se movimentar no tabuleiro
         public void incrementarQteMovimentos()
