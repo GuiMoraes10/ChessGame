@@ -10,10 +10,10 @@ namespace xadrez_console
         // imprime o tabuleiro
         public static void imprimirTabuleiro(Tabuleiro tab)
         {
-            for (int i = 0; i < tab.Linhas; i++)
+            for (int i = 0; i < tab.linhas; i++)
             {
                 Console.Write(8 - i + " ");
-                for (int j = 0; j < tab.Colunas; j++)
+                for (int j = 0; j < tab.colunas; j++)
                 {
                     Tela.imprimirPeca(tab.peca(i, j));
                 }
@@ -29,10 +29,10 @@ namespace xadrez_console
             ConsoleColor fundoOriginal = Console.BackgroundColor;
             ConsoleColor fundoAlterado = ConsoleColor.DarkGray;
 
-            for (int i = 0; i < tab.Linhas; i++)
+            for (int i = 0; i < tab.linhas; i++)
             {
                 Console.Write(8 - i + " ");
-                for (int j = 0; j < tab.Colunas; j++)
+                for (int j = 0; j < tab.colunas; j++)
                 {
                     // destaca o fundo da posição quando for uma posição possível
                     if (posicoesPossiveis[i, j])
@@ -68,7 +68,7 @@ namespace xadrez_console
             }
             else
             {
-                if (peca.Cor == Cor.Branca)
+                if (peca.cor == Cor.Branca)
                 {
                     Console.Write(peca);
                 }
