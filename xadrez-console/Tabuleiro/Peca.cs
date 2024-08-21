@@ -11,10 +11,10 @@ namespace xadrez_console.tabuleiro
 
         public Peca (Tabuleiro tab, Cor cor)
         {
-            posicao = null;
+            this.posicao = null;
             this.cor = cor;
             this.tab = tab;
-            qteMovimentos = 0;
+            this.qteMovimentos = 0;
         }
 
 
@@ -44,7 +44,7 @@ namespace xadrez_console.tabuleiro
             return false;
         }
 
-        public bool podeMoverPara(Posicao pos)
+        public bool movimentoPossivel(Posicao pos)
         {
             return movimentosPossiveis()[pos.linha, pos.coluna];
         }
